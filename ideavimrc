@@ -5,27 +5,43 @@
 " Show a few lines of context around the cursor. Note that this makes the
 " text scroll if you mouse-click near the start or end of the window.
 set scrolloff=5
+set showmode ruler
+set showcmd
+set smartcase
+
 
 " Do incremental searching.
-set incsearch
+set incsearch hlsearch
 
+set ignorecase
 set number relativenumber
-
-set showmode ruler
 
 set so=5
 
 set ideajoin
 
 " set ideastatusicon=gray
+" """"""""""""""""""""""""""""""""""""""""
+set surround
+set multiple-cursors
+set commentary
+set argtextobj
+set ReplaceWithRegister
+set exchange
+set matchit
+set highlightedyank
+set NERDTree
+let g:highlightedyank_highlight_duration = '300'
+let g:highlightedyank_highlight_color = 'rbg(160, 160, 160, 155)'
+
 
 set ideamarks
 
-set NERDTree
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
+"""""""""""""""""""""""""""""""""""""""""""
 let mapleader = "\<space>""
 
 nnoremap U <C-R>
@@ -41,6 +57,7 @@ nnoremap <C-l> <C-w>l
 
 nnoremap <leader>gf :action GotoFile<CR>
 nnoremap <leader>u :action ShowUsages<CR>
+nnoremap <leader>f :action FindInPath<CR>
 " nnoremap <leader>u :action FindUsages<CR>
 
 sethandler <C-F> a:ide
@@ -55,16 +72,16 @@ sethandler <C-c> a:ide
 sethandler <C-A> a:vim
 sethandler <C-N> a:vim
 
+"""""""""""""""""""RUN"""""""""""""""""""""
+nnoremap <leader>rb :action Rebuild<CR>
+nnoremap <leader>bb :action Build<CR>
+nnoremap <leader>ra :action RunCOnfiguration<CR>
 
-"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
-"" Map \r to the Reformat Code action
-"map \r <Action>(ReformatCode)
+"""""""""""""""""""JUMP"""""""""""""""""""""
+nnoremap <leader>fp :action FindInPath<CR>
+nnoremap <leader>gf :action GotoFile<CR>
+nnoremap <leader>gs :action GotoSymbol<CR>
 
-"" Map <leader>d to start debug
-"map <leader>d <Action>(Debug)
+"""""""""""""""""""Windows"""""""""""""""""""""
+nnoremap <leader>sf :action ShowFilePath<CR>
 
-"" Map \b to toggle the breakpoint on the current line
-"map \b <Action>(ToggleLineBreakpoint)
-
-
-" Find more examples here: https://jb.gg/share-ideavimrc
