@@ -39,6 +39,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug 'tpope/vim-surround'
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 colorscheme gruvbox
