@@ -57,6 +57,7 @@ nnoremap <C-l> <C-w>l
 
 nnoremap <leader>gf :action GotoFile<CR>
 nnoremap <leader>u :action ShowUsages<CR>
+nnoremap <A-u> :action FindUsages<CR>
 nnoremap <leader>f :action FindInPath<CR>
 " nnoremap <leader>u :action FindUsages<CR>
 
