@@ -70,6 +70,7 @@ nnoremap <leader>ra :action RunCOnfiguration<CR>
 nnoremap <leader>fp :action FindInPath<CR>
 nnoremap <leader>gf :action GotoFile<CR>
 nnoremap <leader>gs :action GotoSymbol<CR>
+nnoremap <leader>n :action SelectInProjectView<CR>
 
 """""""""""""""""""Windows"""""""""""""""""""""
 nnoremap <leader>sf :action ShowFilePath<CR>
