@@ -22,18 +22,6 @@ set ideajoin
 
 " set ideastatusicon=gray
 " """"""""""""""""""""""""""""""""""""""""
-set surround
-set multiple-cursors
-set commentary
-set argtextobj
-set ReplaceWithRegister
-set exchange
-set matchit
-set highlightedyank
-set NERDTree
-let g:highlightedyank_highlight_duration = '300'
-let g:highlightedyank_highlight_color = 'rbg(160, 160, 160, 155)'
-
 
 set ideamarks
 
@@ -86,3 +74,17 @@ nnoremap <leader>gs :action GotoSymbol<CR>
 """""""""""""""""""Windows"""""""""""""""""""""
 nnoremap <leader>sf :action ShowFilePath<CR>
 
+
+"""""""""""""""""""Plugin"""""""""""""""""""""
+set surround
+set multiple-cursors
+set commentary
+set argtextobj
+set ReplaceWithRegister
+set matchit
+set highlightedyank
+set NERDTree
+let g:highlightedyank_highlight_duration = '300'
+let g:highlightedyank_highlight_color = 'rbg(160, 160, 160, 155)'
+set exchange
+set clipboard+=ideaput
