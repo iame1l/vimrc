@@ -40,6 +40,7 @@ Plug 'morhetz/gruvbox'
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug 'tpope/vim-surround'
 Plug 'rust-lang/rust.vim'
+Plug 'tommcdo/vim-exchange'
 call plug#end()
 
 colorscheme gruvbox
