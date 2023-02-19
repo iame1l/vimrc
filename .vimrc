@@ -19,8 +19,10 @@ set nobackup
 
 set incsearch
 set hlsearch
+set ignorecase
 
 set ruler
+
 
 let mapleader=" "
 
@@ -33,6 +35,7 @@ inoremap jk <C-c>
 
 nnoremap 0 ^
 
+set nocompatible
 call plug#begin()
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
@@ -43,6 +46,9 @@ Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug 'tpope/vim-surround'
 Plug 'rust-lang/rust.vim'
 Plug 'tommcdo/vim-exchange'
+Plug 'junegunn/vim-peekaboo'
+Plug 'vim/killersheep'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 colorscheme gruvbox
