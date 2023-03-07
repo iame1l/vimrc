@@ -8,8 +8,6 @@ set so=5
 
 set number relativenumber
 
-" set showmode
-set noshowmode
 set showcmd
 set showmatch
 
@@ -41,7 +39,9 @@ Plug 'preservim/nerdcommenter'
 Plug 'machakann/vim-highlightedyank'
 Plug 'junegunn/seoul256.vim'
 Plug 'itchyny/lightline.vim'
+Plug 'itchyny/vim-gitbranch'
 Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug 'tpope/vim-surround'
 Plug 'rust-lang/rust.vim'
@@ -51,12 +51,31 @@ Plug 'vim/killersheep'
 Plug 'sheerun/vim-polyglot'
 call plug#end()
 
+""""""""""""""""""""""colorscheme"""""""""""""
+set background=dark
+"let g:gruvbox_material_background = 'medium'
+"let g:gruvbox_material_better_performance = 1
+"colorscheme gruvbox-material
 colorscheme gruvbox
 " colorscheme seoul256
-set background=dark
 set laststatus=2
 " let g:lightline = { ‘colorscheme’: ‘gruvbox’ }
 
+"""""""""""""""""""""statusline"""""""""""""""""
+" set showmode
+set noshowmode
+let g:lightline = {
+      \ 'colorscheme': 'gruvbox',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'gitbranch#name'
+      \ },
+      \ }
+
+""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>n :NERDTree<CR>
 
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
