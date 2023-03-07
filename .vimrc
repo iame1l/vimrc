@@ -85,7 +85,7 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 """"""""""""""""""""""""""""""""""""""""""""""
 let g:highlightedyank_highlight_duration = 500
-"highlight HighlightedyankRegion cterm=reverse gui=reverse
+highlight HighlightedyankRegion cterm=reverse gui=reverse
 
 """"""""""""""""""""fcitx5""""""""""""""""""""
 let fcitx5state=system("fcitx5-remote")
