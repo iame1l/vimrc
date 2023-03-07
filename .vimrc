@@ -8,7 +8,6 @@ set so=5
 
 set number relativenumber
 
-set showcmd
 set showmatch
 
 set encoding=utf-8
@@ -63,6 +62,7 @@ set laststatus=2
 
 """""""""""""""""""""statusline"""""""""""""""""
 " set showmode
+set showcmd
 set noshowmode
 let g:lightline = {
       \ 'colorscheme': 'gruvbox',
