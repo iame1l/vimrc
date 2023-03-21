@@ -32,23 +32,27 @@ set matchit
 set highlightedyank
 set NERDTree
 set easymotion
-let g:highlightedyank_highlight_duration = '300'
-let g:highlightedyank_highlight_color = 'rbg(160, 160, 160, 155)'
+set sneak
 set exchange
 set clipboard+=ideaput
 
 set ideamarks
 
+let g:highlightedyank_highlight_duration = '300'
+let g:highlightedyank_highlight_color = 'rbg(160, 160, 160, 155)'
+nnoremap <Leader>n :action SelectInProjectView<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""
 
 " Don't use Ex mode, use Q for formatting.
-map Q gq
+nnoremap Q :q<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = "\<space>""
 
 nnoremap U <C-R>
 nnoremap 0 ^
+nnoremap == :action ReformatCode<CR>
 
 nnoremap <leader>w :vsp<CR>
 
