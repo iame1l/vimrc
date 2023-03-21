@@ -17,19 +17,34 @@ set ignorecase
 set number relativenumber
 
 set so=5
-
 set ideajoin
 
 " set ideastatusicon=gray
 " """"""""""""""""""""""""""""""""""""""""
 
+"""""""""""""""""""Plugin"""""""""""""""""""""
+set surround
+set multiple-cursors
+set commentary
+set argtextobj
+set ReplaceWithRegister
+set matchit
+set highlightedyank
+set NERDTree
+set easymotion
+let g:highlightedyank_highlight_duration = '300'
+let g:highlightedyank_highlight_color = 'rbg(160, 160, 160, 155)'
+set exchange
+set clipboard+=ideaput
+
 set ideamarks
 
+"""""""""""""""""""""""""""""""""""""""""""""""
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
-"""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = "\<space>""
 
 nnoremap U <C-R>
@@ -46,7 +61,7 @@ nnoremap <C-l> <C-w>l
 nnoremap <leader>gf :action GotoFile<CR>
 nnoremap <leader>u :action ShowUsages<CR>
 nnoremap <A-u> :action FindUsages<CR>
-nnoremap <leader>f :action FindInPath<CR>
+" nnoremap <leader>f :action FindInPath<CR>
 " nnoremap <leader>u :action FindUsages<CR>
 
 sethandler <C-F> a:ide
@@ -73,19 +88,12 @@ nnoremap <leader>gs :action GotoSymbol<CR>
 nnoremap <leader>n :action SelectInProjectView<CR>
 
 """""""""""""""""""Windows"""""""""""""""""""""
-nnoremap <leader>sf :action ShowFilePath<CR>
+nnoremap <leader><Leader>sf :action ShowFilePath<CR>
 
 
-"""""""""""""""""""Plugin"""""""""""""""""""""
-set surround
-set multiple-cursors
-set commentary
-set argtextobj
-set ReplaceWithRegister
-set matchit
-set highlightedyank
-set NERDTree
-let g:highlightedyank_highlight_duration = '300'
-let g:highlightedyank_highlight_color = 'rbg(160, 160, 160, 155)'
-set exchange
-set clipboard+=ideaput
+"""""""""""""""""""EasyMotion""""""""""""""""""
+nmap <Leader>j <Plug>(easymotion-j)
+nmap <Leader>k <Plug>(easymotion-k)
+
+nmap <Leader>s <Plug>(easymotion-s)
+nmap <Leader>ff <Plug>(easymotion-f)
