@@ -36,7 +36,7 @@ nnoremap Q :q<CR>
 set nocompatible
 call plug#begin()
 Plug 'preservim/nerdtree'
-Plug 'preservim/nerdcommenter'
+Plug 'tpope/vim-commentary'
 Plug 'machakann/vim-highlightedyank'
 Plug 'junegunn/seoul256.vim'
 Plug 'itchyny/lightline.vim'
