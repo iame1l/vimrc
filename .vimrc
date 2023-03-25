@@ -40,6 +40,7 @@ Plug 'tpope/vim-commentary'
 Plug 'machakann/vim-highlightedyank'
 Plug 'junegunn/seoul256.vim'
 Plug 'itchyny/lightline.vim'
+Plug 'rakr/vim-one'
 Plug 'itchyny/vim-gitbranch'
 Plug 'morhetz/gruvbox'
 Plug 'sainnhe/gruvbox-material'
@@ -54,11 +55,12 @@ Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 """"""""""""""""""""""colorscheme"""""""""""""
-set background=dark
 "let g:gruvbox_material_background = 'medium'
 "let g:gruvbox_material_better_performance = 1
 "colorscheme gruvbox-material
-colorscheme gruvbox
+" colorscheme gruvbox
+colorscheme one
+set background=dark
 " colorscheme seoul256
 set laststatus=2
 " let g:lightline = { ‘colorscheme’: ‘gruvbox’ }
@@ -68,7 +70,7 @@ set laststatus=2
 set showcmd
 set noshowmode
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
+      \ 'colorscheme': 'one',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
