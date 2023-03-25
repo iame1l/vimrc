@@ -55,11 +55,11 @@ Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 """"""""""""""""""""""colorscheme"""""""""""""
-"let g:gruvbox_material_background = 'medium'
-"let g:gruvbox_material_better_performance = 1
-"colorscheme gruvbox-material
+let g:gruvbox_material_background = 'hard' " 'hard', 'medium', 'soft'
+let g:gruvbox_material_better_performance = 1
+colorscheme gruvbox-material
 " colorscheme gruvbox
-colorscheme one
+" colorscheme one
 set background=dark
 " colorscheme seoul256
 set laststatus=2
@@ -70,7 +70,7 @@ set laststatus=2
 set showcmd
 set noshowmode
 let g:lightline = {
-      \ 'colorscheme': 'one',
+      \ 'colorscheme': 'gruvbox_material',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
