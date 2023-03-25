@@ -52,6 +52,7 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'vim/killersheep'
 Plug 'sheerun/vim-polyglot'
 Plug 'easymotion/vim-easymotion'
+Plug 'w0rp/ale'
 call plug#end()
 
 """"""""""""""""""""""colorscheme"""""""""""""
