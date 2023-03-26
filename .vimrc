@@ -1,27 +1,44 @@
-
-" set runtimepath=~/.vim
 syntax on 
-set tabstop=4
-set textwidth=80
-" set formatoptions=tcqmM
-set so=5
+
+let mapleader=" "
 
 set number relativenumber
 
-set showmatch
+set so=5
 
-set encoding=utf-8
+" fcitx5 keep mode
+let fcitx5state=system("fcitx5-remote")
+if fcitx5state
+  autocmd InsertLeave * :silent let fcitx5state=system("fcitx5-remote")[0] | silent !fcitx5-remote -c 
+  " Disable the input method when exiting insert mode and save the state
+  autocmd InsertEnter * :silent if fcitx5state == 2 | call system("fcitx5-remote -o") | endif 
+  " 2 means that the input method was opened in the previous state, and the input method is started when entering the insert mode
+endif
+
+" tab setting
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+" wrap 
 set wrap
+set textwidth=79
+set formatoptions=qrn1
+
+set showmatch
+set encoding=utf-8
 set nobackup
 
+" search 
 set incsearch
 set hlsearch
 set ignorecase
 
 set ruler
+set nocompatible
 
-let mapleader=" "
-
+""""""""" key map""""""""""
 nnoremap <leader>w :vsp<CR>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -33,7 +50,12 @@ nnoremap 0 ^
 
 nnoremap Q :q<CR>
 
-set nocompatible
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin()
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-commentary'
@@ -111,12 +133,6 @@ let g:EasyMotion_smartcase = 1
 nnoremap <Leader>j <Plug>(easymotion-j)
 nnoremap <Leader>k <Plug>(easymotion-k)
 
-""""""""""""""""""""fcitx5""""""""""""""""""""
-let fcitx5state=system("fcitx5-remote")
-autocmd InsertLeave * :silent let fcitx5state=system("fcitx5-remote")[0] | silent !fcitx5-remote -c 
-" Disable the input method when exiting insert mode and save the state
-autocmd InsertEnter * :silent if fcitx5state == 2 | call system("fcitx5-remote -o") | endif 
-" 2 means that the input method was opened in the previous state, and the input method is started when entering the insert mode
 
 """""""""""""""""""""Tip""""""""""""""""""""""
 " :g/^$\n^$/d
