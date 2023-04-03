@@ -8,13 +8,13 @@
 - [**vim-highlightedyank**](https://github.com/machakann/vim-highlightedyank)
 - [**lightline**](https://github.com/itchyny/lightline.vim)
 - [**vim-highlightedyank**](https://github.com/itchyny/vim-gitbranch)
-- [**Yggdroot/LeaderF**](https://github.com/Yggdroot/LeaderF)
-- [**tpope/vim-surround**](https://github.com/tpope/vim-surround)
-- [**rust-lang/rust.vim**](https://github.com/rust-lang/rust.vim)
-- [**tommcdo/vim-exchange**](https://github.com/tommcdo/vim-exchange)
-- [**junegunn/vim-peekaboo**](https://github.com/junegunn/vim-peekaboo)
-- [**easymotion/vim-easymotion**](https://github.com/easymotion/vim-easymotion)
-- [**w0rp/ale**](https://github.com/dense-analysis/ale)
+- [**LeaderF**](https://github.com/Yggdroot/LeaderF)
+- [**vim-surround**](https://github.com/tpope/vim-surround)
+- [**rust.vim**](https://github.com/rust-lang/rust.vim)
+- [**vim-exchange**](https://github.com/tommcdo/vim-exchange)
+- [**vim-peekaboo**](https://github.com/junegunn/vim-peekaboo)
+- [**vim-easymotion**](https://github.com/easymotion/vim-easymotion)
+- [**ale**](https://github.com/dense-analysis/ale)
 
 -------------------------
 ## color theme
