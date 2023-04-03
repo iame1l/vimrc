@@ -62,7 +62,7 @@ Plug 'tpope/vim-commentary'
 Plug 'machakann/vim-highlightedyank'
 Plug 'junegunn/seoul256.vim'
 Plug 'itchyny/lightline.vim'
-Plug 'rakr/vim-one'
+Plug 'joshdick/onedark.vim'
 Plug 'itchyny/vim-gitbranch'
 Plug 'morhetz/gruvbox'
 Plug 'sainnhe/gruvbox-material'
@@ -80,11 +80,9 @@ call plug#end()
 """"""""""""""""""""""colorscheme"""""""""""""
 let g:gruvbox_material_background = 'hard' " 'hard', 'medium', 'soft'
 let g:gruvbox_material_better_performance = 1
-colorscheme gruvbox-material
-" colorscheme gruvbox
-" colorscheme one
+colorscheme gruvbox-material "gruvbox
+" colorscheme onedark
 set background=dark
-" colorscheme seoul256
 set laststatus=2
 " let g:lightline = { ‘colorscheme’: ‘gruvbox’ }
 
