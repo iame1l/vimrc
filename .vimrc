@@ -60,21 +60,22 @@ call plug#begin()
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'machakann/vim-highlightedyank'
-Plug 'junegunn/seoul256.vim'
-Plug 'itchyny/lightline.vim'
-Plug 'joshdick/onedark.vim'
-Plug 'itchyny/vim-gitbranch'
-Plug 'morhetz/gruvbox'
-Plug 'sainnhe/gruvbox-material'
-Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
-Plug 'tpope/vim-surround'
-Plug 'rust-lang/rust.vim'
 Plug 'tommcdo/vim-exchange'
 Plug 'junegunn/vim-peekaboo'
-Plug 'vim/killersheep'
-Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-surround'
 Plug 'easymotion/vim-easymotion'
+" Plug 'sheerun/vim-polyglot'
+
+Plug 'itchyny/lightline.vim'
+Plug 'itchyny/vim-gitbranch'
+Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+Plug 'rust-lang/rust.vim'
 Plug 'w0rp/ale'
+
+" color scheme
+Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
+Plug 'joshdick/onedark.vim'
 call plug#end()
 
 """"""""""""""""""""""colorscheme"""""""""""""
