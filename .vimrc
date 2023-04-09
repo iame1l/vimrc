@@ -69,7 +69,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
-Plug 'vimwiki/vimwiki'
+" Plug 'vimwiki/vimwiki'
 Plug 'rust-lang/rust.vim'
 Plug 'w0rp/ale'
 

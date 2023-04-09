@@ -15,7 +15,7 @@
 - [**LeaderF**](https://github.com/Yggdroot/LeaderF)
 - [**rust.vim**](https://github.com/rust-lang/rust.vim)
 - [**ale**](https://github.com/dense-analysis/ale)
-- [**vimwiki**](https://github.com/vimwiki/vimwiki)
+<!-- - [**vimwiki**](https://github.com/vimwiki/vimwiki) -->
 
 -------------------------
 ## color scheme
