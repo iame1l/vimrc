@@ -133,6 +133,9 @@ let g:EasyMotion_smartcase = 1
 nnoremap <Leader>j <Plug>(easymotion-j)
 nnoremap <Leader>k <Plug>(easymotion-k)
 
+""""""""""""""""""""ale"""""""""""""""""""""""
+nnoremap gd :ALEGoToDefinition<CR>
+
 
 """""""""""""""""""""Tip""""""""""""""""""""""
 " :g/^$\n^$/d
