@@ -136,6 +136,12 @@ nnoremap <Leader>k <Plug>(easymotion-k)
 """"""""""""""""""""ale"""""""""""""""""""""""
 nnoremap gd :ALEGoToDefinition<CR>
 
+""""""""""""""""""""LeaerF"""""""""""""""""""""""
+let g:Lf_WindowPosition = 'popup'
+
+nnoremap <c-n> :LeaderfMru<cr>
+let g:Lf_ShortcutF = '<c-p>'
+let g:Lf_ShortcutB = '<m-n>'
 
 """""""""""""""""""""Tip""""""""""""""""""""""
 " :g/^$\n^$/d
