@@ -9,7 +9,6 @@ set showmode ruler
 set showcmd
 set smartcase
 
-
 " Do incremental searching.
 set incsearch hlsearch
 
@@ -79,6 +78,7 @@ sethandler <C-V> a:ide
 sethandler <C-c> a:ide
 sethandler <C-A> a:vim
 sethandler <C-N> a:vim
+sethandler <C-P> a:vim
 
 """""""""""""""""""RUN"""""""""""""""""""""
 nnoremap <leader>rb :action Rebuild<CR>
@@ -87,9 +87,10 @@ nnoremap <leader>ra :action RunCOnfiguration<CR>
 
 """""""""""""""""""JUMP"""""""""""""""""""""
 nnoremap <leader>fp :action FindInPath<CR>
-nnoremap <leader>gf :action GotoFile<CR>
+nnoremap <c-p> :action GotoFile<CR>
 nnoremap <leader>gs :action GotoSymbol<CR>
 nnoremap <leader>n :action SelectInProjectView<CR>
+nnoremap <leader>ss :action FileStructurePopup<CR>
 
 """""""""""""""""""Windows"""""""""""""""""""""
 nnoremap <leader><Leader>sf :action ShowFilePath<CR>
