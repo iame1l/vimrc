@@ -50,6 +50,8 @@ nnoremap 0 ^
 
 nnoremap Q :q<CR>
 
+nnoremap == gg=G<C-o><C-o>
+
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
