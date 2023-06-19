@@ -14,7 +14,8 @@
 - [**lightline**](https://github.com/itchyny/lightline.vim)
 - [**vim-highlightedyank**](https://github.com/itchyny/vim-gitbranch)
 - [**rust.vim**](https://github.com/rust-lang/rust.vim)
-- [**prabirshrestha/vim-lsp**](https://github.com/prabirshrestha/vim-lsp)
+- [**vim-lsp**](https://github.com/prabirshrestha/vim-lsp)
+
 <!-- - [**ale**](https://github.com/dense-analysis/ale) -->
 <!-- - [**LeaderF**](https://github.com/Yggdroot/LeaderF) -->
 
