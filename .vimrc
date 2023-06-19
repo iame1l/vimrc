@@ -9,10 +9,10 @@ set so=5
 " fcitx5 keep mode
 let fcitx5state=system("fcitx5-remote")
 if fcitx5state
-  autocmd InsertLeave * :silent let fcitx5state=system("fcitx5-remote")[0] | silent !fcitx5-remote -c 
-  " Disable the input method when exiting insert mode and save the state
-  autocmd InsertEnter * :silent if fcitx5state == 2 | call system("fcitx5-remote -o") | endif 
-  " 2 means that the input method was opened in the previous state, and the input method is started when entering the insert mode
+    autocmd InsertLeave * :silent let fcitx5state=system("fcitx5-remote")[0] | silent !fcitx5-remote -c 
+    " Disable the input method when exiting insert mode and save the state
+    autocmd InsertEnter * :silent if fcitx5state == 2 | call system("fcitx5-remote -o") | endif 
+    " 2 means that the input method was opened in the previous state, and the input method is started when entering the insert mode
 endif
 
 " tab setting
@@ -53,9 +53,9 @@ nnoremap Q :q<CR>
 nnoremap == gg=G<C-o><C-o>
 
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 call plug#begin()
@@ -70,6 +70,10 @@ Plug 'easymotion/vim-easymotion'
 " statusline
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
+
+" auto-complete
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'prabirshrestha/asyncomplete.vim'
 
 " LSP
 Plug 'prabirshrestha/vim-lsp'
@@ -97,19 +101,20 @@ set laststatus=2
 " let g:lightline = { ‘colorscheme’: ‘gruvbox’ }
 
 """""""""""""""""""""statusline"""""""""""""""""
+
 " set showmode
 set showcmd
 set noshowmode
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox_material',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'gitbranch#name'
-      \ },
-      \ }
+            \ 'colorscheme': 'gruvbox_material',
+            \ 'active': {
+            \   'left': [ [ 'mode', 'paste' ],
+            \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+            \ },
+            \ 'component_function': {
+            \   'gitbranch': 'gitbranch#name'
+            \ },
+            \ }
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>n :NERDTree<CR>
@@ -142,6 +147,13 @@ nnoremap <Leader>j <Plug>(easymotion-j)
 nnoremap <Leader>k <Plug>(easymotion-k)
 
 """"""""""""""""""""LSP"""""""""""""""""""""""
+
+""""""""""""""""""""auto-complete"""""""""""""
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
+
+""""""""""""""""""""LSP"""""""""""""""""""""""
 " ale
 " nnoremap gd :ALEGoToDefinition<CR>
 
@@ -149,10 +161,10 @@ nnoremap <Leader>k <Plug>(easymotion-k)
 if executable('pylsp')
     " pip install python-lsp-server
     au User lsp_setup call lsp#register_server({
-        \ 'name': 'pylsp',
-        \ 'cmd': {server_info->['pylsp']},
-        \ 'allowlist': ['python'],
-        \ })
+                \ 'name': 'pylsp',
+                \ 'cmd': {server_info->['pylsp']},
+                \ 'allowlist': ['python'],
+                \ })
 endif
 
 function! s:on_lsp_buffer_enabled() abort
@@ -174,7 +186,7 @@ function! s:on_lsp_buffer_enabled() abort
 
     let g:lsp_format_sync_timeout = 1000
     autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
-    
+
     " refer to doc to add more commands
 endfunction
 

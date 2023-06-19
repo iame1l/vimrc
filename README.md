@@ -15,8 +15,8 @@
 - [**vim-highlightedyank**](https://github.com/itchyny/vim-gitbranch)
 - [**rust.vim**](https://github.com/rust-lang/rust.vim)
 - [**vim-lsp**](https://github.com/prabirshrestha/vim-lsp)
+- [**asynccomplete.vim**](https://github.com/prabirshrestha/asyncomplete.vim)
 
-<!-- - [**ale**](https://github.com/dense-analysis/ale) -->
 <!-- - [**LeaderF**](https://github.com/Yggdroot/LeaderF) -->
 
 -------------------------
