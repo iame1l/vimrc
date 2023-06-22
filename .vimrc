@@ -65,6 +65,7 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'tommcdo/vim-exchange'
 Plug 'junegunn/vim-peekaboo'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
 Plug 'easymotion/vim-easymotion'
 
 " statusline

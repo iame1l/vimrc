@@ -10,6 +10,7 @@
 - [**vim-exchange**](https://github.com/tommcdo/vim-exchange)
 - [**vim-peekaboo**](https://github.com/junegunn/vim-peekaboo)
 - [**vim-surround**](https://github.com/tpope/vim-surround)
+- [**vim-fugitive**](https://github.com/tpope/vim-fugitive)
 - [**vim-easymotion**](https://github.com/easymotion/vim-easymotion)
 - [**lightline**](https://github.com/itchyny/lightline.vim)
 - [**vim-highlightedyank**](https://github.com/itchyny/vim-gitbranch)
