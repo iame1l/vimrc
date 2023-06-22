@@ -120,12 +120,18 @@ let g:lightline = {
 """"""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>n :NERDTree<CR>
 
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_SR = "\<Esc>]50;CursorShape=2\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
-""""""""""""""""""""""""""""""""""""""""""""""
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+""""""""""""""""""""cursor""""""""""""""""""""
+" let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+" let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+" let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+let &t_SI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[2 q"
+
+""""""""""""""""""""highlightyank"""""""""""""
 let g:highlightedyank_highlight_duration = 500
 highlight HighlightedyankRegion cterm=reverse gui=reverse
 
