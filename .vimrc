@@ -147,26 +147,21 @@ let g:EasyMotion_smartcase = 1
 nnoremap <Leader>j <Plug>(easymotion-j)
 nnoremap <Leader>k <Plug>(easymotion-k)
 
-""""""""""""""""""""LSP"""""""""""""""""""""""
-
 """"""""""""""""""""auto-complete"""""""""""""
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
 
 """"""""""""""""""""LSP"""""""""""""""""""""""
-" ale
-" nnoremap gd :ALEGoToDefinition<CR>
-
 " vim-lsp
-if executable('pylsp')
-    " pip install python-lsp-server
-    au User lsp_setup call lsp#register_server({
-                \ 'name': 'pylsp',
-                \ 'cmd': {server_info->['pylsp']},
-                \ 'allowlist': ['python'],
-                \ })
-endif
+" if executable('pylsp')
+"     " pip install python-lsp-server
+"     au User lsp_setup call lsp#register_server({
+"                 \ 'name': 'pylsp',
+"                 \ 'cmd': {server_info->['pylsp']},
+"                 \ 'allowlist': ['python'],
+"                 \ })
+" endif
 
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
@@ -205,7 +200,6 @@ augroup END
 " let g:Lf_ShortcutB = '<m-n>'
 
 " fzf
-
 
 """""""""""""""""""""Tip""""""""""""""""""""""
 " :g/^$\n^$/d
