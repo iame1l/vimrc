@@ -43,6 +43,9 @@ set incsearch
 set hlsearch
 set ignorecase
 
+" tags
+" set tags=tags;/
+
 set ruler
 set nocompatible
 
@@ -92,9 +95,9 @@ Plug 'mattn/vim-lsp-settings'
 Plug 'rust-lang/rust.vim'
 
 " fuzzy finder
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-" Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'
+Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 
 " color scheme
 Plug 'morhetz/gruvbox'
@@ -205,10 +208,10 @@ augroup END
 
 """"""""""""""""""""fuzzy finder""""""""""""""""" {{{
 " leaderF
-" let g:Lf_WindowPosition = 'popup'
-" nnoremap <c-n> :LeaderfMru<cr>
-" let g:Lf_ShortcutF = '<c-p>'
-" let g:Lf_ShortcutB = '<m-n>'
+let g:Lf_WindowPosition = 'popup'
+nnoremap <c-n> :LeaderfMru<cr>
+let g:Lf_ShortcutF = '<c-p>'
+let g:Lf_ShortcutB = '<m-n>'
 
 " fzf
 " }}}

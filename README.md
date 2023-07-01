@@ -3,7 +3,6 @@
 ------------------------
 ## plugin
 - [**vim-plug**](https://github.com/junegunn/vim-plug)
-- [**fzf**](https://github.com/junegunn/fzf.vim)
 - [**nerdtree**](https://github.com/preservim/nerdtree)
 - [**vim-commentary**](https://github.com/tpope/vim-commentary)
 - [**vim-highlightedyank**](https://github.com/machakann/vim-highlightedyank)
@@ -17,8 +16,9 @@
 - [**rust.vim**](https://github.com/rust-lang/rust.vim)
 - [**vim-lsp**](https://github.com/prabirshrestha/vim-lsp)
 - [**asynccomplete.vim**](https://github.com/prabirshrestha/asyncomplete.vim)
+- [**LeaderF**](https://github.com/Yggdroot/LeaderF)
 
-<!-- - [**LeaderF**](https://github.com/Yggdroot/LeaderF) -->
+<!-- - [**fzf**](https://github.com/junegunn/fzf.vim) -->
 
 -------------------------
 ## color scheme
