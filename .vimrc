@@ -212,6 +212,7 @@ let g:Lf_WindowPosition = 'popup'
 nnoremap <c-n> :LeaderfMru<cr>
 let g:Lf_ShortcutF = '<c-p>'
 let g:Lf_ShortcutB = '<m-n>'
+let g:Lf_Gtagslabel = 'native-pygments'
 
 " fzf
 " }}}
