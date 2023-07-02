@@ -70,6 +70,7 @@ nnoremap <A-u> :action FindUsages<CR>
 " nnoremap <leader>u :action FindUsages<CR>
 nnoremap <leader>rn :action RenameElement<CR>
 nnoremap K :action QuickJavaDoc<CR>
+inoremap <C-P> :action ParameterInfo<CR>
 
 sethandler <C-F> a:ide
 sethandler <C-H> a:vim
