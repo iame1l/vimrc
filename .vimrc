@@ -3,6 +3,11 @@ syntax on
 let mapleader=" "
 
 set number relativenumber
+set autochdir
+set autoindent
+set spell
+set spelllang=en
+
 
 set so=5
 
@@ -42,9 +47,6 @@ set nobackup
 set incsearch
 set hlsearch
 set ignorecase
-
-" tags
-" set tags=tags;/
 
 set ruler
 set nocompatible
@@ -187,7 +189,7 @@ function! s:on_lsp_buffer_enabled() abort
     nmap <buffer> gS <plug>(lsp-workspace-symbol-search)
     nmap <buffer> gr <plug>(lsp-references)
     nmap <buffer> gi <plug>(lsp-implementation)
-    nmap <buffer> gt <plug>(lsp-type-definition)
+    " nmap <buffer> gt <plug>(lsp-type-definition)
     nmap <buffer> <leader>rn <plug>(lsp-rename)
     nmap <buffer> [g <plug>(lsp-previous-diagnostic)
     nmap <buffer> ]g <plug>(lsp-next-diagnostic)
@@ -209,6 +211,7 @@ augroup END
 """"""""""""""""""""fuzzy finder""""""""""""""""" {{{
 " leaderF
 let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup=1
 nnoremap <c-n> :LeaderfMru<cr>
 let g:Lf_ShortcutF = '<c-p>'
 let g:Lf_ShortcutB = '<m-n>'
