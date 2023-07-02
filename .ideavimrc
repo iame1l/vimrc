@@ -8,6 +8,7 @@ set scrolloff=5
 set showmode ruler
 set showcmd
 set smartcase
+set timeoutlen=350
 
 " Do incremental searching.
 set incsearch hlsearch
@@ -52,6 +53,7 @@ let mapleader = "\<space>""
 nnoremap U <C-R>
 nnoremap 0 ^
 nnoremap == :action ReformatCode<CR>
+" nnoremap == gg=G<C-o>
 
 nnoremap <leader>w :vsp<CR>
 
@@ -60,12 +62,14 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-
-nnoremap <leader>gf :action GotoFile<CR>
-nnoremap <leader>u :action ShowUsages<CR>
+nnoremap g<tab> :action PreviousEditorTab<CR>
+" nnoremap <leader>gf :action GotoFile<CR>
+nnoremap gr :action ShowUsages<CR>
 nnoremap <A-u> :action FindUsages<CR>
 " nnoremap <leader>f :action FindInPath<CR>
 " nnoremap <leader>u :action FindUsages<CR>
+nnoremap <leader>rn :action RenameElement<CR>
+nnoremap K :action QuickJavaDoc<CR>
 
 sethandler <C-F> a:ide
 sethandler <C-H> a:vim
@@ -79,18 +83,24 @@ sethandler <C-c> a:ide
 sethandler <C-A> a:vim
 sethandler <C-N> a:vim
 sethandler <C-P> a:vim
+sethandler <C-Q> a:vim
 
 """""""""""""""""""RUN"""""""""""""""""""""
-nnoremap <leader>rb :action Rebuild<CR>
-nnoremap <leader>bb :action Build<CR>
-nnoremap <leader>ra :action RunCOnfiguration<CR>
+nnoremap rb :action Rebuild<CR>
+nnoremap bb :action Build<CR>
+nnoremap cl :action Clean<CR>
+nnoremap ra :action RunCOnfiguration<CR>
 
 """""""""""""""""""JUMP"""""""""""""""""""""
-nnoremap <leader>fp :action FindInPath<CR>
-nnoremap <c-p> :action GotoFile<CR>
-nnoremap <leader>gs :action GotoSymbol<CR>
+" nnoremap <leader>fp :action FindInPath<CR>
+" nnoremap <c-p> :action GotoFile<CR>
+nnoremap <leader>f :action GotoFile<CR>
+nnoremap gs :action GotoSymbol<CR>
+nnoremap gS :action FileStructurePopup<CR>
 nnoremap <leader>n :action SelectInProjectView<CR>
-nnoremap <leader>ss :action FileStructurePopup<CR>
+" nnoremap <leader>ss :action FileStructurePopup<CR>
+
+"""""""""""""""""""LSP""""""""""""""""""
 
 """""""""""""""""""Windows"""""""""""""""""""""
 nnoremap <leader><Leader>sf :action ShowFilePath<CR>

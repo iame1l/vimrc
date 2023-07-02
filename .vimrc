@@ -50,6 +50,7 @@ set ignorecase
 
 set ruler
 set nocompatible
+set timeoutlen=350
 
 """"""""" key map"""""""""" {{{
 nnoremap <leader>w :vsp<CR>
@@ -206,6 +207,7 @@ augroup lsp_install
     " call s:on_lsp_buffer_enabled only for languages that has the server registered.
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+
 " }}}
 
 """"""""""""""""""""fuzzy finder""""""""""""""""" {{{
@@ -213,7 +215,11 @@ augroup END
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup=1
 nnoremap <c-n> :LeaderfMru<cr>
-let g:Lf_ShortcutF = '<c-p>'
+" let g:Lf_ShortcutF = '<leader><leader>F'
+" let g:Lf_ShortcutF = '<C-P>'
+nnoremap <leader>f :Leaderf file<CR>
+nnoremap <leader>t :Leaderf gtags<CR>
+nnoremap <leader>rg :Leaderf rg<CR>
 let g:Lf_ShortcutB = '<m-n>'
 let g:Lf_Gtagslabel = 'native-pygments'
 
