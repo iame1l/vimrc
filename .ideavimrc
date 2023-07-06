@@ -55,6 +55,7 @@ nnoremap 0 ^
 nnoremap == :action ReformatCode<CR>
 " nnoremap == gg=G<C-o>
 
+inoremap jk <esc>
 nnoremap <leader>w :vsp<CR>
 
 nnoremap <C-h> <C-w>h
@@ -62,7 +63,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-nnoremap g<tab> :action PreviousEditorTab<CR>
+nnoremap g<tab> <C-S-6><CR>
 " nnoremap <leader>gf :action GotoFile<CR>
 nnoremap gr :action ShowUsages<CR>
 nnoremap <A-u> :action FindUsages<CR>
@@ -95,7 +96,7 @@ nnoremap ra :action RunCOnfiguration<CR>
 """""""""""""""""""JUMP"""""""""""""""""""""
 " nnoremap <leader>fp :action FindInPath<CR>
 " nnoremap <c-p> :action GotoFile<CR>
-nnoremap <leader>f :action GotoFile<CR>
+nnoremap gf :action GotoFile<CR>
 nnoremap gs :action GotoSymbol<CR>
 nnoremap gS :action FileStructurePopup<CR>
 nnoremap <leader>n :action SelectInProjectView<CR>
