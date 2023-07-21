@@ -51,6 +51,7 @@ nnoremap Q :q<CR>
 let mapleader = "\<space>""
 
 nnoremap U <C-R>
+inoremap <C-V> <C-R>*
 nnoremap 0 ^
 nnoremap == :action ReformatCode<CR>
 " nnoremap == gg=G<C-o>
@@ -80,7 +81,7 @@ sethandler <C-K> a:vim
 sethandler <C-L> a:vim
 sethandler <C-O> a:vim
 sethandler <C-S> a:vim
-sethandler <C-V> a:ide
+sethandler <C-V> a:vim
 sethandler <C-c> a:ide
 sethandler <C-A> a:vim
 sethandler <C-N> a:vim
