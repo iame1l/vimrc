@@ -84,6 +84,7 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'easymotion/vim-easymotion'
+Plug 'vimwiki/vimwiki'
 
 " statusline
 Plug 'itchyny/lightline.vim'

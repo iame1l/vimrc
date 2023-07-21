@@ -17,6 +17,7 @@
 - [**vim-lsp**](https://github.com/prabirshrestha/vim-lsp)
 - [**asynccomplete.vim**](https://github.com/prabirshrestha/asyncomplete.vim)
 - [**LeaderF**](https://github.com/Yggdroot/LeaderF)
+- [**vimwiki**](https://github.com/vimwiki/vimwiki)
 
 <!-- - [**fzf**](https://github.com/junegunn/fzf.vim) -->
 
