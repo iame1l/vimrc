@@ -93,7 +93,11 @@ sethandler <C-Q> a:vim
 nnoremap rb :action Rebuild<CR>
 nnoremap bb :action Build<CR>
 nnoremap cl :action Clean<CR>
+nnoremap db :action Debug<CR>
+nnoremap br :action Run<CR>
 nnoremap ra :action RunCOnfiguration<CR>
+
+nnoremap bp :action ToggleLineBreakpoint<CR>
 
 """""""""""""""""""JUMP"""""""""""""""""""""
 " nnoremap <leader>fp :action FindInPath<CR>
