@@ -18,6 +18,7 @@
 - [**asynccomplete.vim**](https://github.com/prabirshrestha/asyncomplete.vim)
 - [**LeaderF**](https://github.com/Yggdroot/LeaderF)
 - [**vimwiki**](https://github.com/vimwiki/vimwiki)
+- [**markdown-preview**](https://github.com/iamcco/markdown-preview.nvim)
 
 <!-- - [**fzf**](https://github.com/junegunn/fzf.vim) -->
 
