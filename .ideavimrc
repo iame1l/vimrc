@@ -91,7 +91,8 @@ sethandler <C-Q> a:vim
 
 """""""""""""""""""RUN"""""""""""""""""""""
 nnoremap rb :action Rebuild<CR>
-nnoremap bb :action Build<CR>
+" nnoremap bb :action Build<CR>
+nnoremap bb :action Rust.Build<CR>
 nnoremap cl :action Clean<CR>
 nnoremap db :action Debug<CR>
 nnoremap br :action Run<CR>
@@ -111,12 +112,17 @@ nnoremap <leader>n :action SelectInProjectView<CR>
 """""""""""""""""""LSP""""""""""""""""""
 
 """""""""""""""""""Windows"""""""""""""""""""""
-nnoremap <leader><Leader>sf :action ShowFilePath<CR>
+nnoremap sf :action ShowFilePath<CR>
+nnoremap te :action ActivateTerminalToolWindow<CR>
+nnoremap hw :action HideActiveWindow<CR>
 
 
 """""""""""""""""""EasyMotion""""""""""""""""""
 nmap <Leader>j <Plug>(easymotion-j)
+
 nmap <Leader>k <Plug>(easymotion-k)
 
 nmap <Leader>s <Plug>(easymotion-s)
-nmap <Leader>ff <Plug>(easymotion-f)
+nmap <Leader>f <Plug>(easymotion-f)
+
+set keep-english-in-normal
