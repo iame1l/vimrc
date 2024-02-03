@@ -164,9 +164,11 @@ let g:EasyMotion_do_mapping = 0 " Disable default mappings
 
 " Jump to anywhere you want with minimal keystrokes, with just one key binding.
 " `s{char}{label}`
-nnoremap s <Plug>(easymotion-overwin-f2)
+nnoremap <Leader>s <Plug>(easymotion-overwin-f2)
 " or
 " `s{char}{char}{label}`
+" nnoremap <Leader>f <Plug>(easymotion-overwin-f2)
+nnoremap <Leader>f <Plug>(easymotion-overwin-f)
 
 " Need one more keystroke, but on average, it may be more comfortable.
 " nmap s <Plug>(easymotion-overwin-f2)
@@ -222,7 +224,8 @@ let g:Lf_PreviewInPopup=1
 nnoremap <c-n> :LeaderfMru<cr>
 " let g:Lf_ShortcutF = '<leader><leader>F'
 " let g:Lf_ShortcutF = '<C-P>'
-nnoremap <leader>f :Leaderf file<CR>
+nnoremap gf :Leaderf file<CR>
+" nnoremap <leader>f :Leaderf file<CR>
 nnoremap <leader>t :Leaderf gtags<CR>
 nnoremap <leader>rg :Leaderf rg<CR>
 let g:Lf_ShortcutB = '<m-n>'
