@@ -8,6 +8,7 @@ set autoindent
 set spell
 set spelllang=en
 
+set wildchar=<Tab> wildmenu wildmode=full
 
 set so=5
 
@@ -51,6 +52,11 @@ set ignorecase
 set ruler
 set nocompatible
 set timeoutlen=350
+
+""""""""" buffers """""""""" {{{
+nnoremap <F5> :buffers<CR>:buffer<Space>
+nnoremap bn :buffers<CR>:buffer<Space>
+" }}}
 
 """"""""" key map"""""""""" {{{
 nnoremap <leader>w :vsp<CR>
