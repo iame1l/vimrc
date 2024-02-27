@@ -52,6 +52,7 @@ set ignorecase
 set ruler
 set nocompatible
 set timeoutlen=350
+set jumpoptions=stack
 
 """"""""" buffers """""""""" {{{
 nnoremap <F5> :buffers<CR>:buffer<Space>
